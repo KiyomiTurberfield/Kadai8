@@ -25,7 +25,6 @@ public class LinkData {
 	 
 	    public LinkData(String name, String mail, String reserveDate) {
 	        super();
-	        //this.id = id;
 	        this.name = name;
 	        this.mail = mail;
 	        this.reserveDate = reserveDate;

@@ -28,7 +28,7 @@ import model.PMF;
 import model.Account;
 import model.PostReserveLogic;
 import model.Reserve;
-
+import com.google.appengine.api.users.*;
 /**
  *
  * @author g14940nm
@@ -89,14 +89,22 @@ public class ReservationMain extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         String month = request.getParameter("month");
         String date = request.getParameter("date");
-        String reserveDate = month+"-"+date;
+        String time = request.getParameter("time");
+        String reserveDate = month+"-"+date+"-"+time;
         //セッションスコープから値を取り出す
-        /*HttpSession session = request.getSession();
+        /*
+        HttpSession session = request.getSession();
         Account account = (Account) session.getAttribute("account");
         String mail = account.getMail();
-        String name = account.getName();*/
-        String mail = "aaaa@gmail";
-        String name = "やまだ";
+        String name = account.getName();
+        //String mail = "aaaa@gmail";
+        //String name = "やまだ";*/
+        
+        //GAE使用バージョン
+        HttpSession session = request.getSession();
+        User user = (User)session.getAttribute("user");
+        String mail = user.getEmail();
+        String name = user.getNickname();
 
         //予約処理の実行
         /*Reserve reserve = new Reserve(mail, reserveDate, name);
@@ -122,12 +130,13 @@ public class ReservationMain extends HttpServlet {
         LinkData data = new LinkData(name,mail,reserveDate);
         PersistenceManagerFactory factory = PMF.get();
         PersistenceManager manager = factory.getPersistenceManager();
-
+        
         try {
             manager.makePersistent(data);
         } finally {
             manager.close();
         }
+        //session.setAttribute("data", data);
         response.sendRedirect("/reservationOK.jsp");
 
     }

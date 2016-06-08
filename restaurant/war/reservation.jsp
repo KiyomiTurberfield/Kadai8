@@ -16,14 +16,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script src="external.js"></script>
 
         <title>予約書き込みフォーム</title>
     </head>
     <body>
         <h1>予約画面</h1>
+        <p>ご希望の日程とお時間を指定してください。</p>
+        
         <form action="/reservation" method="post">
-
             <select name="month">
 
                 <option value="01">1</option>
@@ -38,7 +38,7 @@
                 <option value="10">10</option>
                  <option value="11">11</option>
                 <option value="12">12</option>
-            </select>
+            </select>月
             <select name="date">
 
                 <option value="01">1</option>
@@ -72,10 +72,28 @@
                 <option value="29">29</option>
                 <option value="30">30</option>
                  <option value="31">31</option>
-            </select>
-
+            </select>日
+            
+            <%-- <input type="time" name="time" min="10:00" max="21:00" step="1800">--%>
+            <input type="time" name="time" value="10:00" list="data1">
+			
+			<datalist id="data1">
+			<option value="10:00"></option>
+			<option value="11:00"></option>
+			<option value="12:00"></option>
+			<option value="13:00"></option>
+			<option value="14:00"></option>
+			<option value="15:00"></option>
+			<option value="16:00"></option>
+			<option value="17:00"></option>
+			<option value="18:00"></option>
+			<option value="19:00"></option>
+			<option value="20:00"></option>
+			</datalist>
+            
             <input type="submit" value="予約する">
         </form>
-        <p> <a href ="loginOK.jsp">メインへ</a></p>
+        <p> <a href ="loginOK.jsp">メインへ戻る</a></p>
+        <p> <a href="/logout">ログアウト</a></p>
     </body>
 </html>

@@ -3,11 +3,13 @@
     Created on : 2015/12/23, 10:06:11
     Author     : g14940nm
 --%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <title>予約状況確認ページ</title>
         <script type="text/javascript" src="lib.js"></script>
         <script type="text/javascript">
@@ -46,8 +48,8 @@
         <p><a href="/RestaurantPair/StaffMain">戻る</a></p>
     </body>--%>
     <body onload="getData(null);">
-    <h1>データの表示</h1>
-     
+    <h1>レストラン予約一覧</h1>
+     <p> <a href ="index.jsp">レストラントップ画面へ戻る</a></p>
     <table id="datatable" border="1">
       <tr>
         <td>wait...</td>

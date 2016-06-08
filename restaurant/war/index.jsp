@@ -13,9 +13,9 @@
     </head>
     <body>
         <h1>レストラントップページ</h1>
-         <%-- <p><a href="/RestaurantPair/LoginServlet">ログイン</a></p>
-        <p><a href="/RestaurantPair/RegisterMain">ユーザー登録</a></p> --%>
-       <p><a href="loginOK.jsp">ユーザーのかたはこちらへ</a></p>
+         <%-- <p><a href="/RestaurantPair/LoginServlet">ログイン</a></p>--%>
+        <%-- <p><a href="/RestaurantPair/RegisterMain">ユーザー登録</a></p> --%>
+       <p><a href="/loginOK.jsp">ユーザーのかたはこちらへ</a></p>
         <p><a href="staffloginOK.jsp">お店のかたはこちらへ</a></p>
     </body>
 </html>

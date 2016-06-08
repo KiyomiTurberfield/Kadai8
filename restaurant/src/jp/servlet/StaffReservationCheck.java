@@ -68,7 +68,6 @@ public class StaffReservationCheck extends HttpServlet {
         PersistenceManager manager = factory.getPersistenceManager();
         response.setCharacterEncoding("UTF-8");
         //response.setContentType("text/html");
-        request.setCharacterEncoding("utf-8");
         String param1 = request.getParameter("id");
         PrintWriter out = response.getWriter();
         List<LinkData> list = null;

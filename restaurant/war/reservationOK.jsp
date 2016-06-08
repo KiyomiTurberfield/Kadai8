@@ -5,6 +5,11 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import="com.google.appengine.api.users.*" %>
+
+<%
+User user = (User)session.getAttribute("user");
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,7 +18,10 @@
     </head>
     <body>
         <h1>予約完了</h1>
-        ありがとうございました。
-        <p> <a href ="loginOK.jsp">トップ画面へ</a></p>
+        <%=user.getNickname() %>様
+        ご予約承りました。<br>
+        ご来店お待ちしておりますm(_ _)m
+        <p> <a href ="loginOK.jsp">レストラントップ画面へ</a></p>
+        <p><a href="/logout">ログアウト</a></p>
     </body>
 </html>

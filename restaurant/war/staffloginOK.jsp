@@ -14,7 +14,9 @@
     </head>
     <body>
         <h1>スタッフログイン成功</h1>
-         <p> <a href ="/reservationCheck.jsp">予約確認</a></p>
+         <%--<p> <a href ="/reservationCheck.jsp">予約確認</a></p>--%>
+         <p> <a href ="/findreservation.jsp">予約確認</a></p>
+         <p><a href="/logout">ログアウト</a></p>
           <%-- <p> <a href ="/RestaurantPair/StaffKuchikomiCheck">口コミ確認へ</a></p> --%>
     </body>
 </html>

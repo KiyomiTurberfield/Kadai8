@@ -4,6 +4,25 @@ xmlns="http://java.sun.com/xml/ns/javaee"
 xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	
+	<filter>
+    	<filter-name>logincheck</filter-name>
+    	<filter-class>jp.servlet.LoginCheckFilter</filter-class>
+	</filter>
+	<filter-mapping>
+    	<filter-name>logincheck</filter-name>
+    	<url-pattern>/loginOK.jsp</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+    	<filter-name>logincheck2</filter-name>
+    	<filter-class>jp.servlet.LoginCheckFilter</filter-class>
+	</filter>
+	<filter-mapping>
+    	<filter-name>logincheck2</filter-name>
+    	<url-pattern>/staffloginOK.jsp</url-pattern>
+	</filter-mapping>    
+	
 	<servlet>
 		<servlet-name>Pair</servlet-name>
 		<servlet-class>model.PairServlet</servlet-class>
@@ -12,6 +31,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>Pair</servlet-name>
 		<url-pattern>/pair</url-pattern>
 	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>Reservation</servlet-name>
 		<servlet-class>jp.servlet.ReservationMain</servlet-class>
@@ -20,6 +40,7 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>Reservation</servlet-name>
 		<url-pattern>/reservation</url-pattern>
 	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>ReservationCheck</servlet-name>
 		<servlet-class>jp.servlet.StaffReservationCheck</servlet-class>
@@ -28,6 +49,34 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>ReservationCheck</servlet-name>
 		<url-pattern>/reservationcheck</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+    	<servlet-name>logout</servlet-name>
+    	<servlet-class>jp.servlet.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>logout</servlet-name>
+    	<url-pattern>/logout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+    	<servlet-name>customerReservation</servlet-name>
+    	<servlet-class>jp.servlet.CustomerReservationCheck</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>customerReservation</servlet-name>
+    	<url-pattern>/customerReservation</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+    	<servlet-name>editReservation</servlet-name>
+    	<servlet-class>jp.servlet.EditReservationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>editReservation</servlet-name>
+    	<url-pattern>/edit</url-pattern>
+	</servlet-mapping>
+	
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
