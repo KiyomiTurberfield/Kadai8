@@ -1,15 +1,10 @@
-<%-- 
-    Document   : reservationCheck
-    Created on : 2015/12/23, 10:06:11
-    Author     : g14940nm
-    //今このjspは使ってない
---%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="com.google.appengine.api.users.*" %>
 
 <!DOCTYPE html>
 <html>
-    <head>
+  <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <title>予約状況確認ページ</title>
         <script type="text/javascript" src="lib.js"></script>
@@ -26,31 +21,24 @@
             } else {
                 for (var i = 0;i < json.length;i++){
                     res += '<tr><td><a href="javascript:return false;" onclick="getData(' + json[i].id +');">' + json[i].id + '</a></td>';
-                    res += '<td>'+json[i].name + '</td><td>'+json[i].mail +'</td><td>'+ json[i].reserveDate+'</td>' ;
+                    res += '<td>'+json[i].name + '</td><td>'+json[i].mail +'</td><td>'+ json[i].reserveDate+'</td>' + 
+                    '<td><a href="edit.html?id=' + json[i].id + '">Edit</td>'+
+                    '<td><a href="del.html?id=' + json[i].id + '">Delete</td></tr>';
                 }
+                
             }
             var obj = document.getElementById("datatable");
             obj.innerHTML = res;
         }
-       
+      
         </script>
     </head>
-    <%--<body>
-         <h1>＜店用＞予約状況</h1>
-        <p>予約一覧</p>
-        <% for (Reserve r : reserveList) {%>
-        <span>
-            日付：<%= r.getDate()%>　　
-            お名前：<%= r.getName()%>　　
-            メールアドレス：<%= r.getMail()%>
-        </span><br>
-        <% }%>
-        <p> <a href="/RestaurantPair/Logout"> ログアウトへ</a></p>
-        <p><a href="/RestaurantPair/StaffMain">戻る</a></p>
-    </body>--%>
     <body onload="getData(null);">
     <h1>レストラン予約一覧</h1>
+    <p> <a href ="findreservation.html">予約検索画面へ</a></p>
+     <p> <a href ="staffloginOK.jsp">スタッフページ・トップ画面へ戻る</a></p>
      <p> <a href ="index.jsp">レストラントップ画面へ戻る</a></p>
+     <p><a href="/logout">ログアウト</a></p>
     <table id="datatable" border="1">
       <tr>
         <td>wait...</td>
@@ -59,3 +47,4 @@
     <br>
   </body>
 </html>
+  
