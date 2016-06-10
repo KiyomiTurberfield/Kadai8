@@ -3,6 +3,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>LinkDataの削除</title>
+        <style>
+            h1{font-size: 20pt; font-synthesis: weight; color:#0080ff;}
+            p1{font-size: 20pt; font-synthesis: weight; color:navy;}
+            p{font-size: 13pt; font-synthesis: weight; color: navy;}
+            a{font-size: 14pt; font-synthesis: weight; color:#0080ff;}
+            div{font-size: 14pt; font-synthesis: weight; color:navy;}
+            body{background: #ffffd5}
+     </style>
     <script type="text/javascript" src="lib.js"></script>
         <script type="text/javascript">
         
@@ -25,8 +33,8 @@
     </head>
     <body onload="initial();">
         <h1>データの削除</h1>
-        <div>以下のデータを削除しますか？</div>
-        <div id="data"></div>
+        <div><p>以下のデータを削除しますか？</p></div>
+        <p><div id="data"></div></p>
         <form method="post" action="/del">
             <input type="hidden" id="id" name="id">
             <input type="submit" value="削除">

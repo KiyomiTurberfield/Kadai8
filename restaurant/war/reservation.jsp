@@ -16,8 +16,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
         <title>予約書き込みフォーム</title>
+        <style>
+            h1{font-size: 20pt; font-synthesis: weight; color:#0080ff;}
+            p1{font-size: 20pt; font-synthesis: weight; color:navy;}
+            p{font-size: 13pt; font-synthesis: weight; color: navy;}
+            a{font-size: 14pt; font-synthesis: weight; color:#0080ff;}
+            body{background: #ffffd5}
+     </style>
     </head>
     <body>
         <h1>予約画面</h1>

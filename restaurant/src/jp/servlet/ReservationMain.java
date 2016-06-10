@@ -127,6 +127,7 @@ public class ReservationMain extends HttpServlet {
             dispatcher.forward(request, response);
         }*/
         
+        //datastoreに登録！
         LinkData data = new LinkData(name,mail,reserveDate);
         PersistenceManagerFactory factory = PMF.get();
         PersistenceManager manager = factory.getPersistenceManager();

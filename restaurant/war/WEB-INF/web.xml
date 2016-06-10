@@ -11,17 +11,8 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</filter>
 	<filter-mapping>
     	<filter-name>logincheck</filter-name>
-    	<url-pattern>/loginOK.jsp</url-pattern>
+    	<url-pattern>/index.jsp</url-pattern>
 	</filter-mapping>
-	
-	<filter>
-    	<filter-name>logincheck2</filter-name>
-    	<filter-class>jp.servlet.LoginCheckFilter</filter-class>
-	</filter>
-	<filter-mapping>
-    	<filter-name>logincheck2</filter-name>
-    	<url-pattern>/staffloginOK.jsp</url-pattern>
-	</filter-mapping>    
 	
 	<servlet>
 		<servlet-name>Pair</servlet-name>
@@ -95,7 +86,16 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
     	<url-pattern>/find</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+    	<servlet-name>staffCheck</servlet-name>
+    	<servlet-class>jp.servlet.StaffCheck</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>staffCheck</servlet-name>
+    	<url-pattern>/staffCheck</url-pattern>
+	</servlet-mapping>
+	
 	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>welcome.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>

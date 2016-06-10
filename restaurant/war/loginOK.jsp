@@ -17,6 +17,13 @@ User user = (User)session.getAttribute("user");
 <head>
 <meta charset="UTF-8">
 <title>会員ページ</title>
+<style>
+            h1{font-size: 20pt; font-synthesis: weight; color:#0080ff;}
+            p1{font-size: 20pt; font-synthesis: weight; color:navy;}
+            p{font-size: 13pt; font-synthesis: weight; color: navy;}
+            a{font-size: 14pt; font-synthesis: weight; color:#0080ff;}
+            body{background: #ffffd5}
+     </style>
 </head>
 <body>
 <%-- <p>ようこそ<c:out value="${account.getName()}" />さん</p>--%>
@@ -24,8 +31,6 @@ User user = (User)session.getAttribute("user");
 
 <p><a href="reservation.jsp">予約画面へ</a></p>
 
-<%-- <p><a href="/RestaurantPair/KuchikomiMain">口コミ投稿画面へ</a></p> --%>
-<%-- <p><a href="/RestaurantPair/Logout">ログアウト</a> --%>
 <a href="/logout">ログアウト</a>
 </body>
 </html>

@@ -20,7 +20,7 @@ public class LogoutServlet extends HttpServlet {
     	 
         UserService service = UserServiceFactory.getUserService();
         String url = req.getRequestURI();
-        String logouturl = service.createLogoutURL("/index.jsp");
+        String logouturl = service.createLogoutURL("/welcome.jsp");
         resp.sendRedirect(logouturl);
     }
      

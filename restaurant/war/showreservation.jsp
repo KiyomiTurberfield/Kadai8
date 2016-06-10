@@ -7,6 +7,14 @@
   <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <title>予約状況確認ページ</title>
+        <style>
+            h1{font-size: 20pt; font-synthesis: weight; color:#0080ff;}
+            p1{font-size: 20pt; font-synthesis: weight; color:navy;}
+            p{font-size: 13pt; font-synthesis: weight; color: navy;}
+            a{font-size: 14pt; font-synthesis: weight; color:#0080ff;}
+            table{font-size: 14pt; font-synthesis: weight; color:navy;}
+            body{background: #ffffd5}
+     </style>
         <script type="text/javascript" src="lib.js"></script>
         <script type="text/javascript">
         
