@@ -24,6 +24,7 @@
         <%-- <p><a href="/RestaurantPair/RegisterMain">ユーザー登録</a></p> --%>
        <p><a href="/loginOK.jsp">ユーザーのかたはこちらへ</a></p>
         <%-- <p><a href="staffloginOK.jsp">お店のかたはこちらへ</a></p>--%>
-        <p> <a href ="/staffCheck">お店のかたはこちらへ</a></p>
+         <p> <a href ="/staffCheck">お店のかたはこちらへ</a></p> 
+        <%-- <p> <a href ="/showstaff.html">お店の方</a></p>--%>
     </body>
 </html>
